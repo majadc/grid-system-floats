@@ -1,0 +1,142 @@
+html {
+  box-sizing: border-box;
+  font-family: "Nosifer", cursive, Arial, Helvetica, sans-serif;
+  font-size: 62.5%;
+  background-color: #fffaf6;
+}
+
+*, ::before, ::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+body {
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: #000;
+}
+
+.clearfix::before, .clearfix::after {
+  display: table;
+  content: "";
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.grid-floats {
+  background-image: repeating-linear-gradient(to right, transparent, transparent 8.3333333333%, blue 8.3333333333%, blue 8.3783333333%);
+  padding: 2rem 0;
+}
+.grid-floats__container {
+  margin: 2rem 0;
+}
+.grid-floats [class*=column-] {
+  float: left;
+  text-align: center;
+  min-height: 6rem;
+  word-break: break-all;
+  font-size: 1vw;
+}
+.grid-floats [class*=column-] > span {
+  display: block;
+  font-size: 2rem;
+}
+.grid-floats .column-1 {
+  width: 8.3333333333%;
+}
+.grid-floats .column-2 {
+  width: 16.6666666667%;
+}
+.grid-floats .column-3 {
+  width: 25%;
+}
+.grid-floats .column-4 {
+  width: 33.3333333333%;
+}
+.grid-floats .column-5 {
+  width: 41.6666666667%;
+}
+.grid-floats .column-6 {
+  width: 50%;
+}
+.grid-floats .column-7 {
+  width: 58.3333333333%;
+}
+.grid-floats .column-8 {
+  width: 66.6666666667%;
+}
+.grid-floats .column-9 {
+  width: 75%;
+}
+.grid-floats .column-10 {
+  width: 83.3333333333%;
+}
+.grid-floats .column-11 {
+  width: 91.6666666667%;
+}
+.grid-floats .column-12 {
+  width: 100%;
+}
+
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(1) {
+  background-color: red;
+  color: aqua;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(2) {
+  background-color: yellow;
+  color: blue;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(3) {
+  background-color: lime;
+  color: fuchsia;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(4) {
+  background-color: aqua;
+  color: red;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(5) {
+  background-color: blue;
+  color: yellow;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(6) {
+  background-color: fuchsia;
+  color: lime;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(7) {
+  background-color: #ff8000;
+  color: #0080ff;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(8) {
+  background-color: #80ff00;
+  color: #8000ff;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(9) {
+  background-color: #00ff80;
+  color: #ff0080;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(10) {
+  background-color: #0080ff;
+  color: #ff8000;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(11) {
+  background-color: #8000ff;
+  color: #80ff00;
+}
+.grid-floats__columns12 .grid-floats__row .column-1:nth-child(12) {
+  background-color: #ff0080;
+  color: #00ff80;
+}
+
+.grid-floats__columns6 {
+  background-image: repeating-linear-gradient(to right, transparent, transparent 16.6666666667%, red 16.6666666667%, red 16.7116666667%);
+  padding: 100px 0;
+}
+.grid-floats__columns6 .grid-floats__row {
+  background: linear-gradient(to right, red, red 8.3333333333%, yellow 8.3333333333%, yellow 16.6666666667%, lime 16.6666666667%, lime 25%, aqua 25%, aqua 33.3333333333%, blue 33.3333333333%, blue 41.6666666667%, fuchsia 41.6666666667%, fuchsia 50%, #ff8000 50%, #ff8000 58.3333333333%, #80ff00 58.3333333333%, #80ff00 66.6666666667%, #00ff80 66.6666666667%, #00ff80 75%, #0080ff 75%, #0080ff 83.3333333333%, #8000ff 83.3333333333%, #8000ff 91.6666666667%, #ff0080 91.6666666667%, #ff0080 100%);
+}
+
+/*# sourceMappingURL=style.comp.css.map */

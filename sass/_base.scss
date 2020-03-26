@@ -1,0 +1,24 @@
+html {
+	box-sizing: border-box;
+	font-family: $font_main;
+	font-size: 62.5%;
+	background-color: $color_bg;
+}
+*, ::before, ::after {
+	box-sizing: inherit;
+	margin: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+body {
+	font-size: 1.6rem;
+	line-height: 1.4;
+	color: $color_font;
+}
+.clearfix::before, .clearfix::after {
+	display:table;
+	content: '';
+}
+.clearfix::after {
+	clear:both;
+}

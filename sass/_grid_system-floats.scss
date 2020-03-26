@@ -1,0 +1,119 @@
+.grid-floats {
+	@include bg-gradient-pattern(transparent, color.change($color-1, $alpha: 0.5), 1);
+	padding: 2rem 0;
+	&__container {
+		margin: 3rem 0;
+	}
+	[class*="column-"] {
+		float:left;
+		text-align: center;
+		min-height: 6rem;
+		word-break: break-all;
+		font-size: 1vw;
+		//box-shadow: inset 0 0 0 2px $color-3;
+		border: 2px solid $color-3;
+		border-left-width: 1px;
+		border-right-width: 1px;
+		>span {
+			display: block;
+			font-size: 2rem;
+		}
+	}
+	.column {
+		&-1 {
+			@include column_width(1);
+		}
+		&-2 {
+			@include column_width(2);
+		}
+		&-3 {
+			@include column_width(3);
+		}
+		&-4 {
+			@include column_width(4);
+		}
+		&-5 {
+			@include column_width(5);
+		}
+		&-6 {
+			@include column_width(6);
+		}
+		&-7 {
+			@include column_width(7);
+		}
+		&-8 {
+			@include column_width(8);
+		}
+		&-9 {
+			@include column_width(9);
+		}
+		&-10 {
+			@include column_width(10);
+		}
+		&-11 {
+			@include column_width(11);
+		}
+		&-12 {
+			@include column_width(12);
+		}
+	}
+	
+}
+
+
+//appearance
+.grid-floats {
+	&__columns12 {
+		.grid-floats__row .column-1 {
+			&:nth-child(1) {
+				@include column_appear($color-red);
+			}
+			&:nth-child(2) {
+				@include column_appear($color-yellow);
+			}
+			&:nth-child(3) {
+				@include column_appear($color-green);
+			}
+			&:nth-child(4) {
+				@include column_appear($color-cyan);
+			}
+			&:nth-child(5) {
+				@include column_appear($color-blue);
+			}
+			&:nth-child(6) {
+				@include column_appear($color-magneta);
+			}
+			&:nth-child(7) {
+				@include column_appear($color-yellow_red);
+			}
+			&:nth-child(8) {
+				@include column_appear($color-green_yellow);
+			}
+			&:nth-child(9) {
+				@include column_appear($color-cyan_green);
+			}
+			&:nth-child(10) {
+				@include column_appear($color-blue_cyan);
+			}
+			&:nth-child(11) {
+				@include column_appear($color-magneta_blue);
+			}
+			&:nth-child(12) {
+				@include column_appear($color-red_magneta);
+			}
+		}	
+	}
+}
+
+
+.grid-floats {
+	&__columns6 {
+		@include bg-gradient-pattern(transparent, color.change($color-3, $alpha: 0.5), 2);
+		padding: 1rem 0;
+		.grid-floats__row {
+			@include bg-gradient-columns();
+		}
+		
+		
+	}
+}

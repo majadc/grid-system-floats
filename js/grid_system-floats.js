@@ -23,7 +23,7 @@ var gridSystemFloats = {};
 			showGrid(dataGrid);
 			showGridCode(dataGrid);
 		} else {
-			labelInfo.innerHTML = "You gave wrong data."
+			labelInfo.innerHTML = "You gave wrong data. There must be integers from 1 to 12 and their summ must be 12"
 		}
 	}//getGrid
 
@@ -45,7 +45,7 @@ var gridSystemFloats = {};
 		}
 		
 		for ( let data of dataGrid ) {
-			if ( Number.isInteger(data) && data <= 12 ) {
+			if ( Number.isInteger(data) && data <= 12 && data != 0 ) {
 				sumOfGridData+=data;
 			} else {
 				checkedData = false;

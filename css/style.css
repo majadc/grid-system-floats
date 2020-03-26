@@ -27,6 +27,10 @@ body {
   clear: both;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .grid-floats {
   background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 8.2083333333%, rgba(255, 209, 187, 0.5) 8.2083333333%, rgba(255, 209, 187, 0.5) 8.4583333333%);
   padding: 2rem 0;

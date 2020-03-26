@@ -22,3 +22,6 @@ body {
 .clearfix::after {
 	clear:both;
 }
+.hidden {
+	display: none !important;
+  }

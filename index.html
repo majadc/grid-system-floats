@@ -3,16 +3,82 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet"> 
+	<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600|Raleway:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
 	<title>Grid system floats</title>
 </head>
 <body>
 
 	
-
 	<div class="grid-floats" >
-		
+		<h2>The grid system - based on floats</h2>
+
+
+		<div class="grid-floats__search">
+			<form>
+				<label>Set numbers of column-elements separated by comas.</label>
+				<input type="text" id="grid-floats__input" />
+				<button type="button" id="grid-floats__submit">Go</button>
+				<label id="grid-floats__info"></label>
+				<div id="grid-floats__show" class="hidden"></div>
+				<div class="grid-floats__code"><pre class="language-html" ><code id="grid-floats__code" class="hidden"></code></pre></div>
+			</form>
+		</div><!--grid-floats__search-->
+		<br/>
+		<p>The grid is based on 12 columns in a row.</p>
+		<pre><code>
+&lt;div class="grid-container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="column-n"&gt;Column&lt;/div&gt;
+    &lt;div class="column-n"&gt;Column&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+		<br/>
+		<p>n - the number of column-elements (form 1 to 12. The summ must be 12)</p>
+		<pre><code>
+&lt;div class="grid-container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="column-6"&gt;Column&lt;/div&gt;
+    &lt;div class="column-6"&gt;Column&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+		</code></pre>
+		<p>The column width is a multiple of the width of the column-element (column-1). </p>
+
+<pre><code>
+	[class*="column-"] {
+		float:left;
+	}
+	.column-1 {
+		width: calc(100%/12); /*  width: 8.3333333333%; */
+	}
+	.column-6 {
+		width: width: 50%; /*  6 * 8.3333333333%; */
+	}
+</code></pre>
+		<h3>Grid with 12 columns</h3>
+		<pre>
+			<code>
+&lt;div class="grid-container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="column-1"&gt;1 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;2 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;3 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;4 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;5 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;6 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;7 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;8 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;9 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;10 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;11 Column&lt;/div&gt;
+    &lt;div class="column-1"&gt;12 Column&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</code>
+		</pre>
 		<div class="grid-floats__container grid-floats__columns12">
 			<div class="clearfix grid-floats__row">
 				<div class="column-1"><span>1</span> column</div>
@@ -30,6 +96,43 @@
 			</div>
 		</div><!--grid-floats__all-columns12-->
 
+		<h3>Grid with two columns</h3>
+		<p> There are 6 units per column (<code>class="column-6"</code>)</p>
+		<pre>
+			<code>
+&lt;div class="grid-container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="column-6"&gt;1 Column&lt;/div&gt;
+    &lt;div class="column-6"&gt;2 Column&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</code>
+		</pre>
+		<div class="grid-floats__container grid-floats__columns2">
+			<div class="clearfix grid-floats__row">
+				<div class="column-6"><span>1</span>column</div>
+				<div class="column-6"><span>2</span>column</div>
+			
+			</div>
+		</div>
+
+		<h3>Grid with six columns</h3>
+		<p> There are 2 units per column (<code>class="column-6"</code>)</p>
+		<pre>
+			<code>
+&lt;div class="grid-container"&gt;
+  &lt;div class="row"&gt;
+    &lt;div class="column-2"&gt;1 Column&lt;/div&gt;
+    &lt;div class="column-2"&gt;2 Column&lt;/div&gt;
+    &lt;div class="column-2"&gt;3 Column&lt;/div&gt;
+    &lt;div class="column-2"&gt;4 Column&lt;/div&gt;
+    &lt;div class="column-2"&gt;5 Column&lt;/div&gt;
+    &lt;div class="column-2"&gt;6 Column&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+			</code>
+		</pre>
+
 		<div class="grid-floats__container grid-floats__columns6">
 			<div class="clearfix grid-floats__row">
 				<div class="column-2"><span>1</span>column</div>
@@ -42,20 +145,7 @@
 			</div>
 		</div>
 
-		<div class="grid-floats__search">
-			<form>
-				<label>Set width of the columns separated by comas</label>
-				<input type="text" id="grid-floats__input" />
-				<button type="button" id="grid-floats__submit">Go</button>
-				<label id="grid-floats__info"></label>
-				
-				<div id="grid-floats__show" class="hidden"></div>
-
-				<div class="grid-floats__code" class="hidden"><pre class="language-html" ><code id="grid-floats__code">
-
-				</code></pre></div>
-			</form>
-		</div>
+		
 
 	</div>
 

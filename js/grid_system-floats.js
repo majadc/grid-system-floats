@@ -94,7 +94,7 @@ var gridSystemFloats = {};
 			gridColumns = gridColumns + '        &lt;div class="column-' + element.toString() + '"&gt;' + 'Column ' + numberOfCloumn.toString() + '&lt;/div&gt;\n';
 			numberOfCloumn+=1;
 		}
-		gridShowCode.classList.remove('hidden');
+		gridCode.classList.remove('hidden');
 		gridCode.innerHTML =  gridContainerStart + gridRowStart + gridColumns + gridEndRow + gridEnd;
 	} //showGridCode()
 }).apply(gridSystemFloats);

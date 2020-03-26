@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: "Nosifer", cursive, Arial, Helvetica, sans-serif;
+  font-family: "Raleway", "Open Sans", Tahoma, "Geneva", Arial, sans-serif;
   font-size: 62.5%;
   background-color: #fffaf6;
 }
@@ -32,7 +32,7 @@ body {
 }
 
 .grid-floats {
-  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 8.2083333333%, rgba(255, 209, 187, 0.5) 8.2083333333%, rgba(255, 209, 187, 0.5) 8.4583333333%);
+  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 8.2083333333%, rgba(255, 209, 187, 0.15) 8.2083333333%, rgba(255, 209, 187, 0.15) 8.4583333333%);
   padding: 2rem 0;
 }
 .grid-floats__container {
@@ -40,6 +40,7 @@ body {
 }
 .grid-floats [class*=column-] {
   float: left;
+  font-family: "Nosifer", cursive, Arial, Helvetica, sans-serif;
   text-align: center;
   min-height: 6rem;
   word-break: break-all;
@@ -138,12 +139,18 @@ body {
   color: #00ff80;
 }
 
-.grid-floats__columns6 {
-  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 16.5416666667%, rgba(75, 0, 130, 0.5) 16.5416666667%, rgba(75, 0, 130, 0.5) 16.7916666667%);
+.grid-floats__container {
   padding: 1rem 0;
 }
-.grid-floats__columns6 .grid-floats__row {
+.grid-floats .grid-floats__row, .grid-floats .row {
   background: linear-gradient(to right, red, red 8.3333333333%, yellow 8.3333333333%, yellow 16.6666666667%, lime 16.6666666667%, lime 25%, aqua 25%, aqua 33.3333333333%, blue 33.3333333333%, blue 41.6666666667%, fuchsia 41.6666666667%, fuchsia 50%, #ff8000 50%, #ff8000 58.3333333333%, #80ff00 58.3333333333%, #80ff00 66.6666666667%, #00ff80 66.6666666667%, #00ff80 75%, #0080ff 75%, #0080ff 83.3333333333%, #8000ff 83.3333333333%, #8000ff 91.6666666667%, #ff0080 91.6666666667%, #ff0080 100%);
+}
+
+.grid-floats__columns2 {
+  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 49.875%, rgba(75, 0, 130, 0.5) 49.875%, rgba(75, 0, 130, 0.5) 50.125%);
+}
+.grid-floats__columns6 {
+  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 16.5416666667%, rgba(75, 0, 130, 0.5) 16.5416666667%, rgba(75, 0, 130, 0.5) 16.7916666667%);
 }
 
 /*# sourceMappingURL=style.css.map */

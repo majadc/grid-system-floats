@@ -2,7 +2,7 @@ html {
 	box-sizing: border-box;
 	font-family: $font_main;
 	font-size: 62.5%;
-	background-color: $color_bg;
+	background-color: color.change($color_bg, $alpha: 0.2);
 }
 *, ::before, ::after {
 	box-sizing: inherit;

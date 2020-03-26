@@ -1,4 +1,5 @@
 var gridSystemFloats = {};
+
 (function() {
 	
 
@@ -101,9 +102,8 @@ var gridSystemFloats = {};
 
 
 let buttonSubmit = document.getElementById('grid-floats__submit');
-	buttonSubmit.addEventListener('click', function(){
-		gridSystemFloats.clearGridSystem();
-		gridSystemFloats.getGrid();
-		
-	});
+buttonSubmit.addEventListener('click', function() {
+	gridSystemFloats.clearGridSystem();
+	gridSystemFloats.getGrid();
+});
 

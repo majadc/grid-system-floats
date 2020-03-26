@@ -1,0 +1,30 @@
+.grid-floats {
+	h2, h3 {
+		font-family: $font-1;
+		text-align: center;
+		margin: 0 0 2rem;
+		padding: 2rem 0 0;
+	}
+	h3 {
+		color: $color-7;
+	}
+	&--plain-theme {
+		background-color: $color-2;
+		color: $color-4;
+		max-width: 90%;
+		margin:3rem auto;
+		padding:1rem 2rem;
+		//box-shadow: 0 0 10rem 0 color.change($color-2, $alpha: 0.5);
+	}
+	&__text-container {
+		
+	}
+	&__text {
+		display: flex;
+		
+		padding: 2rem;
+		min-height: 4rem;
+		
+		
+	}
+}

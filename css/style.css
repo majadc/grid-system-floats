@@ -2,7 +2,7 @@ html {
   box-sizing: border-box;
   font-family: "Raleway", "Open Sans", Tahoma, "Geneva", Arial, sans-serif;
   font-size: 62.5%;
-  background-color: #fffaf6;
+  background-color: rgba(255, 228, 196, 0.2);
 }
 
 *, ::before, ::after {
@@ -31,8 +31,60 @@ body {
   display: none !important;
 }
 
+.grid-floats h2, .grid-floats h3 {
+  font-family: "Nosifer", cursive, Arial, Helvetica, sans-serif;
+  text-align: center;
+  margin: 0 0 2rem;
+  padding: 2rem 0 0;
+}
+.grid-floats h3 {
+  color: SaddleBrown;
+}
+.grid-floats--plain-theme {
+  background-color: GhostWhite;
+  color: MidnightBlue;
+  max-width: 90%;
+  margin: 3rem auto;
+  padding: 1rem 2rem;
+}
+.grid-floats__text {
+  display: flex;
+  padding: 2rem;
+  min-height: 4rem;
+}
+
+.grid-floats__search {
+  margin: 2rem 0;
+}
+.grid-floats__labels > * {
+  display: block;
+  font-family: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;
+  margin: 1rem 0;
+  font-size: 1.6rem;
+}
+.grid-floats__labels button {
+  border: none;
+  padding: 0.5em;
+  width: 100%;
+  background-color: Lavender;
+  cursor: pointer;
+  box-shadow: 0 0 2px 0 indigo;
+}
+.grid-floats__labels button:hover {
+  box-shadow: inset 0 0 4px indigo;
+}
+.grid-floats__labels input[type=text] {
+  width: 100%;
+  border: 1px slid Lavender;
+  line-height: 2;
+}
+.grid-floats__labels #grid-floats__info {
+  color: IndianRed;
+  text-align: center;
+}
+
 .grid-floats {
-  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 8.2083333333%, rgba(255, 209, 187, 0.15) 8.2083333333%, rgba(255, 209, 187, 0.15) 8.4583333333%);
+  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 8.2083333333%, rgba(222, 184, 135, 0.15) 8.2083333333%, rgba(222, 184, 135, 0.15) 8.4583333333%);
   padding: 2rem 0;
 }
 .grid-floats__container {
@@ -45,9 +97,8 @@ body {
   min-height: 6rem;
   word-break: break-all;
   font-size: 1vw;
-  border: 2px solid indigo;
-  border-left-width: 1px;
-  border-right-width: 1px;
+  box-shadow: inset 0 0 0 5px indigo;
+  line-height: 3;
 }
 .grid-floats [class*=column-] > span {
   display: block;

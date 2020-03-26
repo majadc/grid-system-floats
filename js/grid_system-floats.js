@@ -2,14 +2,14 @@ var gridSystemFloats = {};
 (function() {
 	
 
-	// this.clearGridSystem = function() {
-	// 	let gridShow = document.getElementById('grid-floats__show');
-	// 	let gridShowCode = document.getElementById('grid-floats__code');
-	// 	gridShow.classList.add('hidden');
-	// 	gridShowCode.classList.add('hidden');
-	// 	gridShow.innerHTML = '';
-	// 	gridShowCode.innerHTML = '';
-	// }
+	this.clearGridSystem = function() {
+		let gridShow = document.getElementById('grid-floats__show');
+		let gridShowCode = document.getElementById('grid-floats__code');
+		gridShow.classList.add('hidden');
+		gridShowCode.classList.add('hidden');
+		gridShow.innerHTML = '';
+		gridShowCode.innerHTML = '';
+	}
 	//function get data for grid system, invokes functions for  validating given data, showing Grid and showing Code for grid
 	this.getGrid = function() {
 		let inputValue = document.getElementById('grid-floats__input').value;
@@ -74,7 +74,7 @@ var gridSystemFloats = {};
 
 			numberOfCloumn+=1;
 		}//for
-		//gridShow.classList.remove('hidden');
+		gridShow.classList.remove('hidden');
 		gridShow.innerHTML = gridContainerStart + gridRowStart + gridColumns + gridEndRow + gridEnd;
 	}//showGrid
 
@@ -94,7 +94,7 @@ var gridSystemFloats = {};
 			gridColumns = gridColumns + '        &lt;div class="column-' + element.toString() + '"&gt;' + 'Column ' + numberOfCloumn.toString() + '&lt;/div&gt;\n';
 			numberOfCloumn+=1;
 		}
-	//	gridShowCode.classList.remove('hidden');
+		gridShowCode.classList.remove('hidden');
 		gridCode.innerHTML =  gridContainerStart + gridRowStart + gridColumns + gridEndRow + gridEnd;
 	} //showGridCode()
 }).apply(gridSystemFloats);
@@ -102,7 +102,7 @@ var gridSystemFloats = {};
 
 let buttonSubmit = document.getElementById('grid-floats__submit');
 	buttonSubmit.addEventListener('click', function(){
-		//gridSystemFloats.clearGridSystem();
+		gridSystemFloats.clearGridSystem();
 		gridSystemFloats.getGrid();
 		
 	});

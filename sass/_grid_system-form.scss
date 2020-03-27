@@ -1,18 +1,20 @@
 .grid-floats {
 	&__search {
-		margin: 2rem 0;
-
+		margin: 2em 0 0;
+	}
+	&--plain-theme {
+		margin-bottom:0;
 	}
 	&__labels {
 		&>* {
 			display: block;
 			font-family: $font-2;
-			margin: 1rem 0;
-			font-size: 1.6rem;
+			margin: 1em 0;
+			font-size: 1.8rem;	
 		}
 		button {
 			border: none;
-			padding: 0.5em;
+			padding: 0.3em;
 			width: 100%;
 			background-color: $color-5;
 			cursor: pointer;
@@ -23,8 +25,13 @@
 		}
 		input[type="text"] {
 			width: 100%;
-			border: 1px slid $color-5;
+			border:none;
 			line-height: 2;
+			background-color: $color-bg;
+			padding: 0 0.5em;
+		}
+		::placeholder {
+			color: color.change($color-4, $alpha: 0.6);
 		}
 		#grid-floats__info {
 			color: $color-6;

@@ -4,8 +4,10 @@ var gridSystemFloats = {};
 	
 
 	this.clearGridSystem = function() {
+		let labelInfo = document.getElementById('grid-floats__info');
 		let gridShow = document.getElementById('grid-floats__show');
 		let gridShowCode = document.getElementById('grid-floats__code');
+		labelInfo.classList.add('hidden');
 		gridShow.classList.add('hidden');
 		gridShowCode.classList.add('hidden');
 		gridShow.innerHTML = '';
@@ -24,7 +26,8 @@ var gridSystemFloats = {};
 			showGrid(dataGrid);
 			showGridCode(dataGrid);
 		} else {
-			labelInfo.innerHTML = "You gave wrong data. There must be integers from 1 to 12 and their summ must be 12"
+			labelInfo.classList.remove('hidden');
+			labelInfo.innerHTML = "You gave wrong data. They must be integers from 1 to 12 and their sum must be 12"
 		}
 	}//getGrid
 
@@ -71,7 +74,7 @@ var gridSystemFloats = {};
 		let numberOfCloumn = 1;
 
 		for ( let element of dataGrid  ) {
-			gridColumns = gridColumns + '    <div class="column-' + element.toString() + '">' + 'Column ' + numberOfCloumn.toString() + '</div>' + '\n';
+			gridColumns = gridColumns + '    <div class="column-' + element.toString() + '">' + '<span>' +numberOfCloumn.toString() + '</span>' +  'Column ' + '</div>' + '\n';
 
 			numberOfCloumn+=1;
 		}//for
@@ -92,7 +95,7 @@ var gridSystemFloats = {};
 		let numberOfCloumn = 1;
 
 		for ( let element of dataGrid  ) {	
-			gridColumns = gridColumns + '        &lt;div class="column-' + element.toString() + '"&gt;' + 'Column ' + numberOfCloumn.toString() + '&lt;/div&gt;\n';
+			gridColumns = gridColumns + '        &lt;div class="column-' + element.toString() + '"&gt;' +  numberOfCloumn.toString() + ' column ' + '&lt;/div&gt;\n';
 			numberOfCloumn+=1;
 		}
 		gridCode.classList.remove('hidden');
@@ -101,8 +104,20 @@ var gridSystemFloats = {};
 }).apply(gridSystemFloats);
 
 
-let buttonSubmit = document.getElementById('grid-floats__submit');
-buttonSubmit.addEventListener('click', function() {
+let gridFloatsbuttonSubmit = document.getElementById('grid-floats__submit');
+let gridFloatsInputText = document.getElementById('grid-floats__input');
+console.log(gridFloatsInputText);
+console.log(gridFloatsbuttonSubmit);
+gridFloatsInputText.addEventListener('keyup', function(event) {
+	
+	if (event.keyCode === 13) {
+		event.preventDefault();
+		gridFloatsbuttonSubmit.click();
+	}
+	
+});
+gridFloatsbuttonSubmit.addEventListener('click', function() {
+	event.preventDefault();
 	gridSystemFloats.clearGridSystem();
 	gridSystemFloats.getGrid();
 });

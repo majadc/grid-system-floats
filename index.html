@@ -6,46 +6,44 @@
 	<link href="https://fonts.googleapis.com/css?family=Nosifer&display=swap" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Baloo+Chettan+2:400,600|Raleway:400,400i,600&display=swap&subset=latin-ext" rel="stylesheet">
 	<link rel="stylesheet" href="css/style.css">
-	<title>Grid system floats</title>
+	<title>Grid system  -  floats</title>
 </head>
 <body>
 
 	
 	<div class="grid-floats" >
 		<h2>The grid system - based on floats</h2>
-
-
 		<div class="grid-floats__search">
 			<form>
 				<h3>Create grid</h3>
 				<div class="grid-floats__labels grid-floats--plain-theme">
-					<label>Set numbers of column-elements separated by comas.</label>
-					<input type="text" id="grid-floats__input" />
-					<button type="button" id="grid-floats__submit">Go</button>
-					<label id="grid-floats__info"></label>
+					<label>Set the numbers of column-elements separated by comas. They must be integers from 1 to 12 and their sum must be 12.</label>
+					<input type="text" id="grid-floats__input" placeholder="example: 1, 3, 8" />
+					<button id="grid-floats__submit">Go</button>
+					<label id="grid-floats__info" class="hidden"></label>
 				</div>
-				<div id="grid-floats__show" class="hidden"></div>
 				<div class="grid-floats__code"><pre class="language-html" ><code id="grid-floats__code" class="hidden"></code></pre></div>
+				<div id="grid-floats__show" class="hidden"></div>
 			</form>
 		</div><!--grid-floats__search-->
 		<div class="grid-floats__text-container grid-floats--plain-theme">
 			<p>The grid is based on 12 columns in a row.</p>
 		<pre><code>
 &lt;div class="grid-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="column-n"&gt;Column&lt;/div&gt;
-    &lt;div class="column-n"&gt;Column&lt;/div&gt;
-  &lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="column-n"&gt;Column&lt;/div&gt;
+		&lt;div class="column-n"&gt;Column&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 		</code></pre>
 		
-			<p>n - the number of column-elements (form 1 to 12. The summ must be 12)</p>
+			<p>n - the number of column-elements (form 1 to 12. The sum must be 12)</p>
 		<pre><code>
 &lt;div class="grid-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="column-6"&gt;Column&lt;/div&gt;
-    &lt;div class="column-6"&gt;Column&lt;/div&gt;
-  &lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="column-6"&gt;Column&lt;/div&gt;
+		&lt;div class="column-6"&gt;Column&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 		</code></pre>
 			<p>The column width is a multiple of the width of the column-element (column-1). </p>
@@ -55,32 +53,49 @@
 		float:left;
 	}
 	.column-1 {
-		width: calc(100%/12); /*  width: 8.3333333333%; */
+		width: calc(100%/12); /* 
+		width: 8.3333333333%; */
 	}
 	.column-6 {
-		width: width: 50%; /*  6 * 8.3333333333%; */
+		width: width: 50%;
+		/*6 * 8.3333333333%; */
 	}
 			</code></pre>
+
+			<p>To prevent collapse of the parent floating elements add to parent (row) clearfix:</p>
+			<pre>
+				<code>
+.clearfix::before,
+.clearfix::after {
+	display: table;
+	content: "";
+	}
+	
+.clearfix::after {
+	clear: both;
+}
+				</code>
+			</pre>
 		</div>
 		<div class="grid-floats--plain-theme">
 			<h3>Grid with 12 columns</h3>
 			<pre>
 				<code>
 &lt;div class="grid-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="column-1"&gt;1 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;2 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;3 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;4 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;5 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;6 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;7 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;8 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;9 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;10 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;11 Column&lt;/div&gt;
-    &lt;div class="column-1"&gt;12 Column&lt;/div&gt;
-  &lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="column-1"&gt;1 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;2 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;3 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;4 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;5 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;6 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;7 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;8 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;9 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;10 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;11 Column&lt;/div&gt;
+		&lt;div class="column-1"&gt;12 Column&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 				</code>
 			</pre>
@@ -108,8 +123,8 @@
 			<code>
 &lt;div class="grid-container"&gt;
   &lt;div class="row"&gt;
-    &lt;div class="column-6"&gt;1 Column&lt;/div&gt;
-    &lt;div class="column-6"&gt;2 Column&lt;/div&gt;
+	&lt;div class="column-6"&gt;1 Column&lt;/div&gt;
+	&lt;div class="column-6"&gt;2 Column&lt;/div&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 			</code>
@@ -128,14 +143,14 @@
 			<pre>
 				<code>
 &lt;div class="grid-container"&gt;
-  &lt;div class="row"&gt;
-    &lt;div class="column-2"&gt;1 Column&lt;/div&gt;
-    &lt;div class="column-2"&gt;2 Column&lt;/div&gt;
-    &lt;div class="column-2"&gt;3 Column&lt;/div&gt;
-    &lt;div class="column-2"&gt;4 Column&lt;/div&gt;
-    &lt;div class="column-2"&gt;5 Column&lt;/div&gt;
-    &lt;div class="column-2"&gt;6 Column&lt;/div&gt;
-  &lt;/div&gt;
+	&lt;div class="row"&gt;
+		&lt;div class="column-2"&gt;1 Column&lt;/div&gt;
+		&lt;div class="column-2"&gt;2 Column&lt;/div&gt;
+		&lt;div class="column-2"&gt;3 Column&lt;/div&gt;
+		&lt;div class="column-2"&gt;4 Column&lt;/div&gt;
+		&lt;div class="column-2"&gt;5 Column&lt;/div&gt;
+		&lt;div class="column-2"&gt;6 Column&lt;/div&gt;
+	&lt;/div&gt;
 &lt;/div&gt;
 				</code>
 			</pre>
@@ -152,10 +167,21 @@
 			
 			</div>
 		</div>
-
-		
-
-	</div>
+		<ul class="grid-floats__list-12 clearfix">
+			<li class="column-1">1</li>
+			<li class="column-1">2</li>
+			<li class="column-1">3</li>
+			<li class="column-1">4</li>
+			<li class="column-1">5</li>
+			<li class="column-1">6</li>
+			<li class="column-1">7</li>
+			<li class="column-1">8</li>
+			<li class="column-1">9</li>
+			<li class="column-1">10</li>
+			<li class="column-1">11</li>
+			<li class="column-1">12</li>
+		</ul>
+	</div><!--grid-floats-->
 
 	<script src="js/grid_system-floats.js"></script>
 

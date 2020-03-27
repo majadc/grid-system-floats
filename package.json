@@ -8,11 +8,29 @@
     "start:sass": "sass --watch sass/style.scss:css/style.css",
 
     "compile:sass": "sass sass/style.scss css/style.comp.css",
-    "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.prefix.css",
+    "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.css",
     "build:css": "npm-run-all compile:sass prefix:css"
 
 
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/majadc/grid-system-floats"
+  },
+  "keywords": [
+    "majadc",
+    "grid"
+  ],
   "author": "majadc",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/majadc/grid-system-floats/issues"
+  },
+  "homepage": "https://majadc.com",
+  "devDependencies": {
+    "autoprefixer": "^9.7.4",
+    "concat": "^1.0.3",
+    "concat-cli": "^4.0.0",
+    "postcss-cli": "^7.1.0"
+  }
 }

@@ -22,6 +22,15 @@
 		padding:2em 2em 1em ;
 		box-shadow: 1px -1px 1px 0 color.change($color-1, $alpha: 0.5);
 	}
+	footer {
+		text-align: center;
+	}
+	a {
+		color: $color-7;
+		&:hover {
+			text-decoration: none;
+		}
+	}
 	code {
 		font-family: $font-2;
 		letter-spacing: 1px;

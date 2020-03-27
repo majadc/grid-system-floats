@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start:sass": "sass --watch sass/style.scss:css/style.css",
 
+    "build:majadc": "sass sass/style_majadc.scss css/css_majadc/grid_system-floats.css",
+
     "compile:sass": "sass sass/style.scss css/style.comp.css",
     "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.css",
     "build:css": "npm-run-all compile:sass prefix:css"

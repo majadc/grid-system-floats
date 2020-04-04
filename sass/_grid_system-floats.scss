@@ -1,8 +1,9 @@
 .grid-floats {
-	@include bg-gradient-pattern(transparent, color.change($color-1, $alpha: 0.15), 1);
+	@include bg-gradient-pattern(color.change($color_bg, $alpha: 0.2), color.change($color-1, $alpha: 0.25), 1);
 	padding: 2rem 0;
 	&__container {
 		margin: 3rem 0;
+		
 	}
 	[class*="column-"] {
 		float:left;

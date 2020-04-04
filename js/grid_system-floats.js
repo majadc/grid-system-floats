@@ -106,8 +106,7 @@ var gridSystemFloats = {};
 
 let gridFloatsbuttonSubmit = document.getElementById('grid-floats__submit');
 let gridFloatsInputText = document.getElementById('grid-floats__input');
-console.log(gridFloatsInputText);
-console.log(gridFloatsbuttonSubmit);
+
 gridFloatsInputText.addEventListener('keyup', function(event) {
 	
 	if (event.keyCode === 13) {

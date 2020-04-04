@@ -5,13 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start:sass": "sass --watch sass/style.scss:css/style.css",
+    "watch:sass": "sass --watch sass/style.scss:css/style.css",
 
-    "build:majadc": "sass sass/style_majadc.scss css/css_majadc/style_grid_floats.css",
+    "build:majadc": "sass sass/style_majadc.scss css/css_majadc/grid_floats-for_majadc.css",
 
     "compile:sass": "sass sass/style.scss css/style.comp.css",
     "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.css",
-    "build:css": "npm-run-all compile:sass prefix:css"
+    "build": "npm-run-all compile:sass prefix:css"
 
 
   },

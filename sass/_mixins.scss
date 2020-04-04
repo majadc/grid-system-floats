@@ -1,5 +1,4 @@
 
-
 @mixin column_width ($number) {
 	$column-1-width: 100%/12;
 	width: $number * $column-1-width;

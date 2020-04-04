@@ -32,7 +32,7 @@ body {
 }
 
 .grid-floats {
-  background-image: repeating-linear-gradient(to right, transparent 0.125%, transparent 8.2083333333%, rgba(222, 184, 135, 0.15) 8.2083333333%, rgba(222, 184, 135, 0.15) 8.4583333333%);
+  background-image: repeating-linear-gradient(to right, rgba(255, 228, 196, 0.2) 0.125%, rgba(255, 228, 196, 0.2) 8.2083333333%, rgba(222, 184, 135, 0.25) 8.2083333333%, rgba(222, 184, 135, 0.25) 8.4583333333%);
   padding: 2rem 0;
 }
 .grid-floats__container {
@@ -211,6 +211,15 @@ body {
   margin: 2.5em auto;
   padding: 2em 2em 1em;
   box-shadow: 1px -1px 1px 0 rgba(222, 184, 135, 0.5);
+}
+.grid-floats footer {
+  text-align: center;
+}
+.grid-floats a {
+  color: SaddleBrown;
+}
+.grid-floats a:hover {
+  text-decoration: none;
 }
 .grid-floats code {
   font-family: "Baloo Chettan 2", "Consolas", "Monaco", "Andale Mono", "Ubuntu Mono", monospace;

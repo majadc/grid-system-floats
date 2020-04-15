@@ -109,7 +109,7 @@ window.addEventListener( 'DOMContentLoaded', () =>{
 	let gridFloatsButtonSubmit = document.getElementById('grid-floats__submit');
 	let gridFloatsInputText = document.getElementById('grid-floats__input');
 
-	if ( gridFloatsInputText !== undefined ) {
+	if ( gridFloatsInputText ) {
 		gridFloatsInputText.addEventListener('keyup', function(event) {
 		
 			if (event.keyCode === 13) {
@@ -119,9 +119,12 @@ window.addEventListener( 'DOMContentLoaded', () =>{
 			
 		});
 	}
-	gridFloatsButtonSubmit.addEventListener('click', function() {
-		event.preventDefault();
-		gridSystemFloats.clearGridSystem();
-		gridSystemFloats.getGrid();
-	});
+	if ( gridFloatsButtonSubmit ) {
+		gridFloatsButtonSubmit.addEventListener('click', function() {
+			event.preventDefault();
+			gridSystemFloats.clearGridSystem();
+			gridSystemFloats.getGrid();
+		});
+	}
+	
 } ); //DOMContentLoaded

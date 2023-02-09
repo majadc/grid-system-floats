@@ -5,6 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+	"stylelint:scss": "stylelint \"sass/*.scss\"",
+	"stylelint:scss:fix": "stylelint --fix \"sass/*.scss\"",
     "watch:sass": "sass --watch sass/style.scss:css/style.css",
     "build:majadc": "sass sass/style_majadc.scss css/css_majadc/grid_floats-for_majadc.css",
     "compile:sass": "sass sass/style.scss css/style.comp.css",

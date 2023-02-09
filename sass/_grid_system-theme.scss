@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use 'sass:math';
+@use "sass:color";
+@use "sass:math";
 
 .grid-floats {
 	h2, h3 {
@@ -7,50 +7,57 @@
 		font-size: 2.5rem;
 		text-align: center;
 		margin: 2em 0 1em;
-		padding: 0 0.5em 0;
+		padding: 0 0.5em;
 	}
+
 	h3 {
 		font-size: 2rem;
 		color: $color-7;
-		margin:0;
+		margin: 0;
 	}
+
 	p {
-		margin:1em 0;	
+		margin: 1em 0;
 	}
+
 	&--plain-theme {
 		background-color: $color-2;
 		color: $color-4;
 		max-width: 90%;
-		margin:2.5em auto;
-		padding:2em 2em 1em ;
+		margin: 2.5em auto;
+		padding: 2em 2em 1em;
 		box-shadow: 1px -1px 1px 0 color.change($color-1, $alpha: 0.5);
 	}
+
 	footer {
 		text-align: center;
 	}
+
 	a {
 		color: $color-7;
+
 		&:hover {
 			text-decoration: none;
 		}
 	}
+
 	code {
 		font-family: $font-2;
 		letter-spacing: 1px;
 	}
+
 	pre {
 		display: flex;
 		margin: 2em 0;
 		word-break: break-all;
-		
+
 		code {
 			background-color: $color-bg;
-			
 			margin: 0 auto;
 			padding: 0.5em 1em;
-			
 		}
 	}
+
 	.grid-floats__list-12 {
 		position: absolute;
 		top: 0;
@@ -58,7 +65,7 @@
 		width: 100%;
 		list-style: none;
 		z-index: -1;
-		
+
 		.column-1 {
 			box-shadow: none;
 			color: color.change($color-1, $alpha: 0.5);
@@ -68,7 +75,7 @@
 	}
 }
 
-@media only screen and ( min-width: 62em ) {
+@media only screen and (min-width: 62em) {
 	.grid-floats--plain-theme {
 		max-width: 50%;
 	}

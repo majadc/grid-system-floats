@@ -1,5 +1,5 @@
-@use 'sass:color';
-@use 'sass:math';
+@use "sass:color";
+@use "sass:math";
 
 html {
 	box-sizing: border-box;
@@ -7,25 +7,29 @@ html {
 	font-size: 62.5%;
 	background-color: color.change($color_bg, $alpha: 0.2);
 }
+
 *, ::before, ::after {
 	box-sizing: inherit;
 	margin: 0;
 	padding: 0;
 	vertical-align: baseline;
 }
+
 body {
 	font-size: 1.6rem;
 	line-height: 1.4;
 	color: $color_font;
 }
+
 .clearfix::before, .clearfix::after {
-	display:table;
-	content: '';
+	display: table;
+	content: "";
 }
+
 .clearfix::after {
-	clear:both;
+	clear: both;
 }
+
 .hidden {
 	display: none !important;
 }
-

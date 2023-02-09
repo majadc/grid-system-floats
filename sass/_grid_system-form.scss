@@ -1,20 +1,23 @@
-@use 'sass:color';
-@use 'sass:math';
+@use "sass:color";
+@use "sass:math";
 
 .grid-floats {
 	&__search {
 		margin: 2em 0 0;
 	}
+
 	&--plain-theme {
-		margin-bottom:0;
+		margin-bottom: 0;
 	}
+
 	&__labels {
-		&>* {
+		& > * {
 			display: block;
 			font-family: $font-2;
 			margin: 1em 0;
-			font-size: 1.8rem;	
+			font-size: 1.8rem;
 		}
+
 		button {
 			border: none;
 			padding: 0.3em;
@@ -22,20 +25,24 @@
 			background-color: $color-5;
 			cursor: pointer;
 			box-shadow: 0 0 2px 0 $color-3;
+
 			&:hover {
 				box-shadow: inset 0 0 4px $color-3;
 			}
 		}
+
 		input[type="text"] {
 			width: 100%;
-			border:none;
+			border: none;
 			line-height: 2;
 			background-color: $color-bg;
 			padding: 0 0.5em;
 		}
+
 		::placeholder {
 			color: color.change($color-4, $alpha: 0.6);
 		}
+
 		#grid-floats__info {
 			color: $color-6;
 			text-align: center;

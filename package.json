@@ -6,14 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch:sass": "sass --watch sass/style.scss:css/style.css",
-
     "build:majadc": "sass sass/style_majadc.scss css/css_majadc/grid_floats-for_majadc.css",
-
     "compile:sass": "sass sass/style.scss css/style.comp.css",
     "prefix:css": "postcss css/style.comp.css --use autoprefixer -o css/style.css",
     "build": "npm-run-all compile:sass prefix:css"
-
-
   },
   "repository": {
     "type": "git",
@@ -30,9 +26,10 @@
   },
   "homepage": "https://majadc.com",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
+    "autoprefixer": "^10.4.13",
     "concat": "^1.0.3",
     "concat-cli": "^4.0.0",
-    "postcss-cli": "^7.1.0"
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^10.1.0"
   }
 }

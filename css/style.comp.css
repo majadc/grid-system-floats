@@ -89,51 +89,51 @@ body {
 }
 
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(1) {
-  background-color: red;
+  background-color: hsl(0deg, 100%, 50%);
   color: aqua;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(2) {
-  background-color: yellow;
+  background-color: hsl(60deg, 100%, 50%);
   color: blue;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(3) {
-  background-color: lime;
+  background-color: hsl(120deg, 100%, 50%);
   color: fuchsia;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(4) {
-  background-color: aqua;
+  background-color: hsl(180deg, 100%, 50%);
   color: red;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(5) {
-  background-color: blue;
+  background-color: hsl(240deg, 100%, 50%);
   color: yellow;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(6) {
-  background-color: fuchsia;
+  background-color: hsl(300deg, 100%, 50%);
   color: lime;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(7) {
-  background-color: #ff8000;
+  background-color: hsl(30deg, 100%, 50%);
   color: #0080ff;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(8) {
-  background-color: #80ff00;
+  background-color: hsl(90deg, 100%, 50%);
   color: #8000ff;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(9) {
-  background-color: #00ff80;
+  background-color: hsl(150deg, 100%, 50%);
   color: #ff0080;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(10) {
-  background-color: #0080ff;
+  background-color: hsl(210deg, 100%, 50%);
   color: #ff8000;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(11) {
-  background-color: #8000ff;
+  background-color: hsl(270deg, 100%, 50%);
   color: #80ff00;
 }
 .grid-floats__columns12 .grid-floats__row .column-1:nth-child(12) {
-  background-color: #ff0080;
+  background-color: hsl(330deg, 100%, 50%);
   color: #00ff80;
 }
 
@@ -141,7 +141,7 @@ body {
   padding: 1rem 0;
 }
 .grid-floats .grid-floats__row, .grid-floats .row {
-  background: linear-gradient(to right, red, red 8.3333333333%, yellow 8.3333333333%, yellow 16.6666666667%, lime 16.6666666667%, lime 25%, aqua 25%, aqua 33.3333333333%, blue 33.3333333333%, blue 41.6666666667%, fuchsia 41.6666666667%, fuchsia 50%, #ff8000 50%, #ff8000 58.3333333333%, #80ff00 58.3333333333%, #80ff00 66.6666666667%, #00ff80 66.6666666667%, #00ff80 75%, #0080ff 75%, #0080ff 83.3333333333%, #8000ff 83.3333333333%, #8000ff 91.6666666667%, #ff0080 91.6666666667%, #ff0080 100%);
+  background: linear-gradient(to right, hsl(0deg, 100%, 50%), hsl(0deg, 100%, 50%) 8.3333333333%, hsl(60deg, 100%, 50%) 8.3333333333%, hsl(60deg, 100%, 50%) 16.6666666667%, hsl(120deg, 100%, 50%) 16.6666666667%, hsl(120deg, 100%, 50%) 25%, hsl(180deg, 100%, 50%) 25%, hsl(180deg, 100%, 50%) 33.3333333333%, hsl(240deg, 100%, 50%) 33.3333333333%, hsl(240deg, 100%, 50%) 41.6666666667%, hsl(300deg, 100%, 50%) 41.6666666667%, hsl(300deg, 100%, 50%) 50%, hsl(30deg, 100%, 50%) 50%, hsl(30deg, 100%, 50%) 58.3333333333%, hsl(90deg, 100%, 50%) 58.3333333333%, hsl(90deg, 100%, 50%) 66.6666666667%, hsl(150deg, 100%, 50%) 66.6666666667%, hsl(150deg, 100%, 50%) 75%, hsl(210deg, 100%, 50%) 75%, hsl(210deg, 100%, 50%) 83.3333333333%, hsl(270deg, 100%, 50%) 83.3333333333%, hsl(270deg, 100%, 50%) 91.6666666667%, hsl(330deg, 100%, 50%) 91.6666666667%, hsl(330deg, 100%, 50%) 100%);
 }
 
 .grid-floats__columns2 {
@@ -246,7 +246,7 @@ body {
 .grid-floats .grid-floats__list-12 .column-1 {
   box-shadow: none;
   color: rgba(222, 184, 135, 0.5);
-  font-size: calc(4vw);
+  font-size: 4vw;
   line-height: 1;
 }
 

@@ -1,0 +1,11 @@
+{
+	"extends": "stylelint-config-standard-scss",
+	"rules": {
+		"indentation": "tab",
+		"no-empty-source": null,
+		"selector-list-comma-newline-after": "never-multi-line",
+		"block-no-empty": null,
+		"max-line-length": null,
+		"scss/at-if-closing-brace-newline-after": null
+	}
+}

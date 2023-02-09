@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:math';
+
 .grid-floats {
 	h2, h3 {
 		font-family: $font-1;

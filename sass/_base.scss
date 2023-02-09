@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:math';
+
 html {
 	box-sizing: border-box;
 	font-family: $font_main;

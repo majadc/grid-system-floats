@@ -1,6 +1,9 @@
 
+@use 'sass:color';
+@use 'sass:math';
+
 @mixin column_width ($number) {
-	$column-1-width: 100%/12;
+	$column-1-width: math.div(100%, 12);
 	width: $number * $column-1-width;
 }
 
@@ -9,43 +12,45 @@
 	color: color.complement($bg_color);
 }
 @mixin bg-gradient-columns () {
-	$step: 100% / 12;
+	// $step: 100% / 12;
+	$step: math.div(100%, 12);
 	background: linear-gradient(to right,
 		$color-red,
 		$color-red $step,
 		$color-yellow $step,
-		$color-yellow $step*2,
-		$color-green $step*2,
-		$color-green $step*3,
-		$color-cyan $step*3,
-		$color-cyan $step*4,
-		$color-blue $step*4,
-		$color-blue $step*5,
-		$color-magneta $step*5,
-		$color-magneta $step*6,
-		$color-yellow_red $step*6,
-		$color-yellow_red $step*7,
-		$color-green_yellow $step*7,
-		$color-green_yellow $step*8,
-		$color-cyan_green $step*8,
-		$color-cyan_green $step*9,
-		$color-blue_cyan $step*9,
-		$color-blue_cyan $step*10,
-		$color-magneta_blue $step*10,
-		$color-magneta_blue $step*11,
-		$color-red_magneta $step*11,
-		$color-red_magneta $step*12
+		$color-yellow $step * 2,
+		$color-green $step * 2,
+		$color-green $step * 3,
+		$color-cyan $step * 3,
+		$color-cyan $step * 4,
+		$color-blue $step * 4,
+		$color-blue $step * 5,
+		$color-magneta $step * 5,
+		$color-magneta $step * 6,
+		$color-yellow_red $step * 6,
+		$color-yellow_red $step * 7,
+		$color-green_yellow $step * 7,
+		$color-green_yellow $step * 8,
+		$color-cyan_green $step * 8,
+		$color-cyan_green $step * 9,
+		$color-blue_cyan $step * 9,
+		$color-blue_cyan $step * 10,
+		$color-magneta_blue $step * 10,
+		$color-magneta_blue $step * 11,
+		$color-red_magneta $step * 11,
+		$color-red_magneta $step * 12
 	);	
 }
 
 @mixin bg-gradient-pattern ($color1, $color2, $numer) {
-	$step: ((100% / 12) * $numer) - 0.125%;
+	// $step: ((100% / 12) * $numer) - 0.125%;
+	$step: (math.div(100%, 12) * $numer) - 0.125%;
 	
 	background-image: repeating-linear-gradient(to right,
 		$color1 0.125%,
 		$color1 $step,
 		$color2 $step,
-		$color2 $step+0.25%
+		$color2 $step + 0.25%
 	);
 
 	

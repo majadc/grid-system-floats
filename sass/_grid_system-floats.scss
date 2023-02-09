@@ -1,3 +1,6 @@
+@use 'sass:color';
+@use 'sass:math';
+
 .grid-floats {
 	@include bg-gradient-pattern(color.change($color_bg, $alpha: 0.2), color.change($color-1, $alpha: 0.25), 1);
 	padding: 2rem 0;
@@ -20,42 +23,47 @@
 		}
 	}
 	.column {
-		&-1 {
-			@include column_width(1);
+		@for $i from 1 through 12 {
+			&-#{$i} {
+				@include column_width($i);
+			}
 		}
-		&-2 {
-			@include column_width(2);
-		}
-		&-3 {
-			@include column_width(3);
-		}
-		&-4 {
-			@include column_width(4);
-		}
-		&-5 {
-			@include column_width(5);
-		}
-		&-6 {
-			@include column_width(6);
-		}
-		&-7 {
-			@include column_width(7);
-		}
-		&-8 {
-			@include column_width(8);
-		}
-		&-9 {
-			@include column_width(9);
-		}
-		&-10 {
-			@include column_width(10);
-		}
-		&-11 {
-			@include column_width(11);
-		}
-		&-12 {
-			@include column_width(12);
-		}
+		// &-1 {
+		// 	@include column_width(1);
+		// }
+		// &-2 {
+		// 	@include column_width(2);
+		// }
+		// &-3 {
+		// 	@include column_width(3);
+		// }
+		// &-4 {
+		// 	@include column_width(4);
+		// }
+		// &-5 {
+		// 	@include column_width(5);
+		// }
+		// &-6 {
+		// 	@include column_width(6);
+		// }
+		// &-7 {
+		// 	@include column_width(7);
+		// }
+		// &-8 {
+		// 	@include column_width(8);
+		// }
+		// &-9 {
+		// 	@include column_width(9);
+		// }
+		// &-10 {
+		// 	@include column_width(10);
+		// }
+		// &-11 {
+		// 	@include column_width(11);
+		// }
+		// &-12 {
+		// 	@include column_width(12);
+		// }
 	}
 	
 }

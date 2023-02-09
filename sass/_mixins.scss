@@ -11,8 +11,8 @@
 	background-color: $bg_color;
 	color: color.complement($bg_color);
 }
+
 @mixin bg-gradient-columns () {
-	// $step: 100% / 12;
 	$step: math.div(100%, 12);
 	background: linear-gradient(to right,
 		$color-red,
@@ -43,7 +43,6 @@
 }
 
 @mixin bg-gradient-pattern ($color1, $color2, $numer) {
-	// $step: ((100% / 12) * $numer) - 0.125%;
 	$step: (math.div(100%, 12) * $numer) - 0.125%;
 	
 	background-image: repeating-linear-gradient(to right,

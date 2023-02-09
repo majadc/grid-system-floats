@@ -28,42 +28,6 @@
 				@include column_width($i);
 			}
 		}
-		// &-1 {
-		// 	@include column_width(1);
-		// }
-		// &-2 {
-		// 	@include column_width(2);
-		// }
-		// &-3 {
-		// 	@include column_width(3);
-		// }
-		// &-4 {
-		// 	@include column_width(4);
-		// }
-		// &-5 {
-		// 	@include column_width(5);
-		// }
-		// &-6 {
-		// 	@include column_width(6);
-		// }
-		// &-7 {
-		// 	@include column_width(7);
-		// }
-		// &-8 {
-		// 	@include column_width(8);
-		// }
-		// &-9 {
-		// 	@include column_width(9);
-		// }
-		// &-10 {
-		// 	@include column_width(10);
-		// }
-		// &-11 {
-		// 	@include column_width(11);
-		// }
-		// &-12 {
-		// 	@include column_width(12);
-		// }
 	}
 	
 }
@@ -130,4 +94,3 @@
 		@include bg-gradient-pattern(transparent, color.change($color-3, $alpha: 0.5), 2);
 	}
 }
-

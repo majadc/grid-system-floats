@@ -1,6 +1,6 @@
 html {
   box-sizing: border-box;
-  font-family: "Raleway", "Open Sans", Tahoma, "Geneva", Arial, sans-serif;
+  font-family: "Raleway", "Open Sans", tahoma, "Geneva", arial, sans-serif;
   font-size: 62.5%;
   background-color: rgba(255, 228, 196, 0.2);
 }
@@ -40,7 +40,7 @@ body {
 }
 .grid-floats [class*=column-] {
   float: left;
-  font-family: "Nosifer", cursive, Arial, Helvetica, sans-serif;
+  font-family: "Nosifer", cursive, arial, helvetica, sans-serif;
   text-align: center;
   word-break: break-all;
   font-size: calc(1vw + 0.1rem);
@@ -167,7 +167,7 @@ body {
   border: none;
   padding: 0.3em;
   width: 100%;
-  background-color: Lavender;
+  background-color: lavender;
   cursor: pointer;
   box-shadow: 0 0 2px 0 indigo;
 }
@@ -178,35 +178,35 @@ body {
   width: 100%;
   border: none;
   line-height: 2;
-  background-color: Bisque;
+  background-color: bisque;
   padding: 0 0.5em;
 }
 .grid-floats__labels ::placeholder {
   color: rgba(25, 25, 112, 0.6);
 }
 .grid-floats__labels #grid-floats__info {
-  color: IndianRed;
+  color: indianred;
   text-align: center;
 }
 
 .grid-floats h2, .grid-floats h3 {
-  font-family: "Nosifer", cursive, Arial, Helvetica, sans-serif;
+  font-family: "Nosifer", cursive, arial, helvetica, sans-serif;
   font-size: 2.5rem;
   text-align: center;
   margin: 2em 0 1em;
-  padding: 0 0.5em 0;
+  padding: 0 0.5em;
 }
 .grid-floats h3 {
   font-size: 2rem;
-  color: SaddleBrown;
+  color: saddlebrown;
   margin: 0;
 }
 .grid-floats p {
   margin: 1em 0;
 }
 .grid-floats--plain-theme {
-  background-color: GhostWhite;
-  color: MidnightBlue;
+  background-color: ghostwhite;
+  color: midnightblue;
   max-width: 90%;
   margin: 2.5em auto;
   padding: 2em 2em 1em;
@@ -216,7 +216,7 @@ body {
   text-align: center;
 }
 .grid-floats a {
-  color: SaddleBrown;
+  color: saddlebrown;
 }
 .grid-floats a:hover {
   text-decoration: none;
@@ -231,7 +231,7 @@ body {
   word-break: break-all;
 }
 .grid-floats pre code {
-  background-color: Bisque;
+  background-color: bisque;
   margin: 0 auto;
   padding: 0.5em 1em;
 }

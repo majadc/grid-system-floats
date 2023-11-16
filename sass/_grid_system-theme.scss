@@ -2,81 +2,88 @@
 @use "sass:math";
 
 .grid-floats {
-	h2, h3 {
-		font-family: $font-1;
-		font-size: 2.5rem;
-		text-align: center;
-		margin: 2em 0 1em;
-		padding: 0 0.5em;
-	}
 
-	h3 {
-		font-size: 2rem;
-		color: $color-7;
-		margin: 0;
-	}
+  h2,
+  h3,
+  h4 {
+    font-family: $font-1;
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2em 0 1em;
+    padding: 0 0.5em;
+  }
 
-	p {
-		margin: 1em 0;
-	}
+  h3 {
+    font-size: 2rem;
+    color: $color-7;
+    margin: 0;
+  }
 
-	&--plain-theme {
-		background-color: $color-2;
-		color: $color-4;
-		max-width: 90%;
-		margin: 2.5em auto;
-		padding: 2em 2em 1em;
-		box-shadow: 1px -1px 1px 0 color.change($color-1, $alpha: 0.5);
-	}
+  h4 {
+    font-size: 1.75rem;
+  }
 
-	footer {
-		text-align: center;
-	}
+  p {
+    margin: 1em 0;
+  }
 
-	a {
-		color: $color-7;
+  &--plain-theme {
+    background-color: $color-2;
+    color: $color-4;
+    max-width: 90%;
+    margin: 2.5em auto;
+    padding: 2em 2em 1em;
+    box-shadow: 1px -1px 1px 0 color.change($color-1, $alpha: 0.5);
+  }
 
-		&:hover {
-			text-decoration: none;
-		}
-	}
+  footer {
+    text-align: center;
+  }
 
-	code {
-		font-family: $font-2;
-		letter-spacing: 1px;
-	}
+  a {
+    color: $color-7;
 
-	pre {
-		display: flex;
-		margin: 2em 0;
-		word-break: break-all;
+    &:hover {
+      text-decoration: none;
+    }
+  }
 
-		code {
-			background-color: $color-bg;
-			margin: 0 auto;
-			padding: 0.5em 1em;
-		}
-	}
+  code {
+    font-family: $font-2;
+    letter-spacing: 1px;
+  }
 
-	.grid-floats__list-12 {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		list-style: none;
-		z-index: -1;
+  pre {
+    display: flex;
+    margin: 2em 0;
+    word-break: break-all;
 
-		.column-1 {
-			box-shadow: none;
-			color: color.change($color-1, $alpha: 0.5);
-			font-size: calc(4vw);
-			line-height: 1;
-		}
-	}
+    code {
+      background-color: $color-bg;
+      margin: 0 auto;
+      padding: 0.5em 1em;
+    }
+  }
+
+  .grid-floats__list-12 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    z-index: -1;
+
+    .column-1 {
+      box-shadow: none;
+      color: color.change($color-1, $alpha: 0.5);
+      font-size: calc(4vw);
+      line-height: 1;
+    }
+  }
 }
 
 @media only screen and (min-width: 62em) {
-	.grid-floats--plain-theme {
-		max-width: 50%;
-	}
+  .grid-floats--plain-theme {
+    max-width: 50%;
+  }
 }
